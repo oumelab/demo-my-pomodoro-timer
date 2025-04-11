@@ -139,7 +139,8 @@ export default function TimerComponent() {
   // };
 
   return (
-    <div className="w-full max-w-3xl mx-auto h-auto bg-gradient-to-tl from-secondary to-primary rounded-xl p-4">
+    <div className={`w-full max-w-3xl mx-auto h-auto  rounded-xl p-4
+    ${mode === "work" ? "bg-gradient-to-tl from-working-secondary to-working-primary" : "bg-gradient-to-tl from-secondary to-primary"}`}>
       <div className="w-full h-full bg-background rounded-xl flex flex-col gap-5 py-8 px-10">
         <ul className="flex justify-center items-center gap-5">
           {["work", "break"].map((modeType) => (
