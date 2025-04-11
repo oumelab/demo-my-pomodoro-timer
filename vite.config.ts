@@ -5,5 +5,6 @@ import svgr from "vite-plugin-svgr";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: process.env.GITHUB_PAGES ? "REPOSITORY_NAME" : "./",
   plugins: [react(), tailwindcss(), svgr({ include: "**/*.svg?react" })],
 })
